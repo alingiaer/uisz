@@ -134,7 +134,7 @@ function library.new(library_title, cfg_location)
 
     menu.open = true
     local ScreenGui = library:create("ScreenGui", {
-        ResetOnSpawn = false,
+         = false,
         ZIndexBehavior = Enum.ZIndexBehavior.Global,
         Name = "unknown",
         IgnoreGuiInset = true,
@@ -166,7 +166,7 @@ function library.new(library_title, cfg_location)
     end
 
     uis.InputBegan:Connect(function(key)
-        if key.KeyCode ~= Enum.KeyCode.Insert then return end
+        if key.KeyCode ~= Enum.KeyCode.RightShift then return end
 
 		ScreenGui.Enabled = not ScreenGui.Enabled
         menu.open = ScreenGui.Enabled
